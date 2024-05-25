@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{::script}, ~{::#latest})}">
+<head>
+    <title>About</title>
+</head>
+<body>
+    <div id="content">
+        <h1>This is About Page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, nobis.</p>
+    </div>
+    <div id="latest">
+        <h1 class="font-bold">This is Latest Heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, nobis.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, sapiente in!</p>
+    </div>
+    
+    <script>
+        console.log("Printing about script!!");
+    </script>
+</body>
+</html>
