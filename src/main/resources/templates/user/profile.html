@@ -7,6 +7,9 @@
 </head>
 <body>
     <h1>This is User Profile</h1>
+
+    <h1 th:text="${loggedInUser.name}"></h1>
+    <h1 th:text="${loggedInUser.email}"></h1>
     <a th:href="@{'/logout'}">Logout</a>
     
 </body>
