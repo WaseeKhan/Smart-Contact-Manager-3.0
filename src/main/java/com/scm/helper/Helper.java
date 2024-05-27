@@ -31,6 +31,7 @@ public class Helper {
         }else if(clientId.equalsIgnoreCase("github")){
             System.out.println("Getting Email From GitHub");
             username = oauth2User.getAttribute("email") != null ? oauth2User.getAttribute("email").toString() : oauth2User.getAttribute("login").toString()+"@dev.io";
+            
         }
 
         
