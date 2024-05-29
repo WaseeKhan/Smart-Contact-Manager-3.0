@@ -66,7 +66,7 @@ public class OAuthenticationSuccessHandler implements AuthenticationSuccessHandl
             user.setAbout("This Account is created from google");
         }
             else if(authorizedClientRegistrationId.equalsIgnoreCase("github")){
-                String email = oauthUser.getAttribute("email") !=null ? oauthUser.getAttribute("email").toString() : oauthUser.getAttribute("login").toString() +"@scm.io";
+                String email = oauthUser.getAttribute("email") !=null ? oauthUser.getAttribute("email").toString() : oauthUser.getAttribute("login").toString() +"@dev.io";
                 String picture = oauthUser.getAttribute("avatar_url").toString();
                 String name = oauthUser.getAttribute("login").toString();
                 String providerUserId = oauthUser.getName();

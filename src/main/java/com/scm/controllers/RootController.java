@@ -7,7 +7,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
-
 import com.scm.entities.User;
 import com.scm.helper.Helper;
 import com.scm.services.UserService;
@@ -33,9 +32,12 @@ public class RootController {
         
         //fetch data from db 
         User user =  userService.getUserByEmail(username);
+        logger.info("User {}", user);
         // System.out.println(user);
         // System.out.println(user.getName());
-        // System.out.println(user.getEmail());
+        // logger.info("userEmail", user.getEmail());
+        // // System.out.println(user.getEmail());
+        // logger.info("User Name ", user.getName());
         model.addAttribute("loggedInUser", user);
     }
 }
