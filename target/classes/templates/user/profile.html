@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{::script},~{})}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title th:text="${loggedInUser.name}+' | SCM 3.0' ">User Profile</title>
 </head>
 <body>
-    <h1>This is User Profile</h1>
-
-    <h1 th:text="${loggedInUser.name}"></h1>
-    <h1 th:text="${loggedInUser.email}"></h1>
-    <a th:href="@{'/logout'}">Logout</a>
-    <a th:href="@{'/user/dashboard'}">Dashboard</a>
+    <div id="content">
+        <h1>This is Home Page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, nobis.</p>
+        <p>New Commit</p>
+    </div>
     
+    <script>
+        console.log("This is profile Page");
+    </script>
 </body>
 </html>

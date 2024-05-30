@@ -89,9 +89,6 @@ public class OAuthenticationSuccessHandler implements AuthenticationSuccessHandl
             else{
                 logger.info("OAuthenticationSuccessHandler : Unknow Provider");
             }
-        
-
-
        
 /* 
         // fetch user  data

@@ -16,7 +16,13 @@ xmlns:th="http://www.thymeleaf.org">
 </head>
 <body class="dark:bg-gray-900 bg-gray-100 dark:text-white">
 
-    <div th:replace="navbar :: navbar"></div>
+    <div th:if="${loggedInUser}">
+        <div th:replace="~{user/user_navbar :: user_navbar}"></div>
+    </div>
+    <div th:unless="${loggedInUser}">
+        <div th:replace="~{navbar :: navbar}"></div>
+    </div>
+    
 
     <div class="p-4">
         <section th:replace="${content}"></section>
