@@ -107,7 +107,7 @@ public class SecurityConfig {
             
             // url where login will process ie: /login like do-register 
             formLogin.loginProcessingUrl("/authenticate");
-            formLogin.defaultSuccessUrl("/user/dashboard");
+            formLogin.defaultSuccessUrl("/user/profile");
             // formLogin.successForwardUrl("/user/dashboard");
             // formLogin.failureForwardUrl("/login?error=true");
             // //we are using email as username
@@ -116,12 +116,7 @@ public class SecurityConfig {
       
         });
 
-        httpSecurity.csrf(AbstractHttpConfigurer::disable);
-
-        httpSecurity.logout(logoutForm->{
-            logoutForm.logoutUrl("/logout");
-            logoutForm.logoutSuccessUrl("/login?logout=true");
-        });
+        
 
         // OAuth2 configuration 
         // httpSecurity.oauth2Login(Customizer.withDefaults());
@@ -132,7 +127,12 @@ public class SecurityConfig {
             
             
                 
-            });
+        });
+            httpSecurity.csrf(AbstractHttpConfigurer::disable);
+            httpSecurity.logout(logoutForm->{
+            logoutForm.logoutUrl("/logout");
+            logoutForm.logoutSuccessUrl("/login?logout=true");
+        });
        
 
         return httpSecurity.build();

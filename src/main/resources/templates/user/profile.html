@@ -4,12 +4,17 @@
     <title th:text="${loggedInUser.name}+' | SCM 3.0' ">User Profile</title>
 </head>
 <body>
-    <div id="content">
-        <h1>This is Home Page</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, nobis.</p>
-        <p>New Commit</p>
+
+<div id="content">
+       <div th:if="${loggedInUser}">
+        <div th:replace="~{user/sidebar :: sidebar}"></div>
     </div>
-    
+    <div style="padding-left: 250px;">
+        <h1 class="border-l">This is Home Page</h1>
+        <p>This is Home Page1.This is Home Page2.This is Home Page3.This is Home Page4.This is Home Page5.This is Home Page.This is Home Page</p>
+        <p>New Commit1.New Commit2.New Commit3</p>
+    </div>
+</div>
     <script>
         console.log("This is profile Page");
     </script>

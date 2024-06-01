@@ -19,6 +19,8 @@ xmlns:th="http://www.thymeleaf.org">
     <div th:if="${loggedInUser}">
         <div th:replace="~{user/user_navbar :: user_navbar}"></div>
     </div>
+ 
+
     <div th:unless="${loggedInUser}">
         <div th:replace="~{navbar :: navbar}"></div>
     </div>
